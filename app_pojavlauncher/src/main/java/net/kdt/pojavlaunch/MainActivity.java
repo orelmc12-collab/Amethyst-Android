@@ -495,6 +495,8 @@ public class MainActivity extends BaseActivity implements ControlButtonMenuListe
         LauncherProfiles.load();
         int requiredJavaVersion = 8;
         if(version.javaVersion != null) requiredJavaVersion = version.javaVersion.majorVersion;
+        // Volt: default mods + featured servers (best effort, never blocks the launch on errors)
+        net.kdt.pojavlaunch.volt.VoltSetup.beforeLaunch(Tools.getGameDirPath(minecraftProfile), versionId);
         Tools.launchMinecraft(this, minecraftAccount, minecraftProfile, versionId, requiredJavaVersion);
         //Note that we actually stall in the above function, even if the game crashes. But let's be safe.
         Tools.runOnUiThread(()-> mServiceBinder.isActive = false);

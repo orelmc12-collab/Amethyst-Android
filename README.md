@@ -1,3 +1,42 @@
+<div align="center">
+
+# ⚡ Volt Launcher for Android
+
+**Minecraft: Java Edition on your phone, the Volt way.**
+
+[![Download](https://img.shields.io/github/v/release/orelmc12-collab/VoltLauncher-Android?label=Download%20APK&style=for-the-badge&color=3ba0ff)](../../releases/latest)
+
+</div>
+
+## ✨ Volt features
+- ⚡ **Volt look:** Volt colors, icon and branding
+- 🧩 **Default mods, auto-installed:** the first time you play a Fabric/Quilt version, Volt installs a
+  mobile-safe set from Modrinth: Fabric API, Lithium, FerriteCore, ModernFix, EntityCulling, Dynamic FPS,
+  AppleSkin, Mod Menu and Xaero's Minimap. (Sodium/Iris aren't included: they don't work with Android renderers.)
+- ⭐ **Featured servers:** the same `sponsored.json` as the PC launcher
+  ([edit it here](https://github.com/orelmc12-collab/VoltLauncher/blob/main/sponsored.json)) is pinned at the
+  top of Minecraft's Multiplayer list.
+- 🔐 Microsoft sign-in · Fabric / Quilt / Forge / NeoForge · Modrinth mods & modpacks · touch controls · gamepad support
+
+## 📥 Install
+Download **VoltLauncher-Android.apk** from [Releases](../../releases/latest), open it, and allow
+"Install unknown apps" if Android asks. You need a Minecraft: Java Edition account.
+
+## 🛠️ Build
+Every push builds the APK in **GitHub Actions** (Actions tab → latest run → *Artifacts*).
+Push a tag like `v1.0.0` to publish `VoltLauncher-Android.apk` to Releases automatically.
+Volt's own code lives in `app_pojavlauncher/src/main/java/net/kdt/pojavlaunch/volt/`.
+
+## ❤️ Credits & license
+Volt Launcher for Android is based on **[Amethyst](https://github.com/AngelAuraMC/Amethyst-Android)**, a continuation of
+**[PojavLauncher](https://github.com/PojavLauncherTeam/PojavLauncher)**, licensed under the **GNU LGPL-3.0**.
+This version is also LGPL-3.0 and its full source is in this repository. Huge thanks to the PojavLauncher and
+Amethyst teams and all their contributors. Volt Launcher is not affiliated with Mojang or Microsoft.
+
+---
+
+<details><summary>Original Amethyst README</summary>
+
 <h1 align="center">Angel Aura Amethyst</h1>
 
 <img src="https://github.com/AngelAuraMC/Amethyst-Android/blob/v3_openjdk/app_pojavlauncher/src/main/assets/amethyst.png" align="left" width="130" height="130" alt="Amethyst logo">
@@ -151,3 +190,5 @@ Future plans include:
 * Enhancing the mod installation experience.
 
 We welcome community feedback and suggestions for our roadmap.  Please feel free to open a feature request in our [issue tracker](https://github.com/AngelAuraMC/Amethyst-Android/issues).
+
+</details>

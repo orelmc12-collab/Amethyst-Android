@@ -86,10 +86,12 @@ android {
             keyPassword "android"
         }
         customRelease {
-            storeFile file("aamc_upload.jks")
-            storePassword System.getenv("GPLAY_KEYSTORE_PASSWORD")
-            keyAlias "android_github_release"
-            keyPassword System.getenv("GPLAY_KEYSTORE_PASSWORD")
+            // Volt: without the private release key (GitHub secret), sign with the included debug key
+            def pw = System.getenv("GPLAY_KEYSTORE_PASSWORD")
+            storeFile file(pw ? "aamc_upload.jks" : "debug.keystore")
+            storePassword pw ?: "android"
+            keyAlias pw ? "android_github_release" : "androiddebugkey"
+            keyPassword pw ?: "android"
         }
         googlePlayBuild {
             storeFile file("upload.jks")
@@ -100,7 +102,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "org.angelauramc.amethyst"
+        applicationId "dev.volt.launcher"
         minSdkVersion 21
         targetSdkVersion 34
         versionCode 10000000
